@@ -1,0 +1,145 @@
+.container{
+    display:grid;
+    grid-template-areas: 
+    "header header header"
+    "left-panel content content"
+    "footer footer footer"
+    ;
+    border:3px solid black;
+    margin-left: 20px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto 1fr auto;
+    height: 100vh;
+}
+.header{
+    grid-area: header;
+    border:1px solid red;
+    margin-top:20px;
+    padding: 20px;
+    text-align: center;
+    display:flex; /* ögeleri yan yana hizalamak icin kullanilir*/
+    justify-content: space-between;
+    margin-left: 0px;
+    align-items: center;
+}
+.loginContainer form 
+{
+    display: flex;
+    gap:10px;
+}
+.loginContainer form label{
+    margin-right: 7px;
+}
+.left-panel{
+    border:1px solid green;
+    grid-area: left-panel;
+    padding: 10px;
+    background-color: antiquewhite;
+    
+}
+.left-panel ul{
+    margin-left: 0px;
+    border: 1px solid;
+    text-align: left;
+    padding-inline-start: 0px;
+}
+.left-panel li{
+    /*border:1px solid black; */
+    list-style-type: none;
+    margin-bottom:20px;
+    padding: 5px;
+   
+    
+}
+.left-panel li a{
+    text-decoration: none;
+}
+.content{
+    grid-area: content;
+    border:1px solid rgb(10, 212, 43);
+    display:flex;
+    background-color:cornsilk;
+    padding: 20px;
+    justify-content: space-around;
+
+}
+
+.form-container
+{
+    display:flex;
+    justify-content: right;
+}
+.register-form {
+    width: 100%;
+    border:1px solid #e69595;
+    padding: 20px;
+    border-radius: 10px;
+
+    
+}
+.register-form label{
+    margin-right: 15px;
+    width: 100px;
+}
+.register-form input{
+    flex:1;
+    padding: 4px;
+    border:1px solid #5f1818;
+    border-radius: 5px;
+}
+.form-group{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+/* .footer{
+    grid-area: footer;
+    border:3px solid burlywood;
+    
+    padding: 20px;
+    margin-top:2px;
+    margin-bottom: 2px;;
+   
+} */
+.footer {
+    grid-area: footer;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #ccc;
+    color: white;
+    text-align: center;
+ }
+ .footer ul{
+
+ }
+.menu {
+    justify-content: start;
+    margin :10px;
+    border: 1px solid;
+
+}
+.menu ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.menu li{
+    float: left;
+      
+    padding: 5px;
+}
+.menu a{
+    text-decoration: none;
+    font-weight: bold;
+}
+.footer ul li{
+    padding-inline-start: 5px;
+    list-style-type: none;
+    float:right
+}
+.footer ul li a{
+    text-decoration: none;
+    
+}

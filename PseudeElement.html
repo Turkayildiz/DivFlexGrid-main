@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        CSS Pseudo-Element (Sözde Etiketler)
+        Bir etiketin belirtilen bölümlerine stil vermek için , 
+        CSS'de Sözde Etiketler kullanılır. Örneğin ;
+
+Bir etikete ait ilk harf veya satırın stilini belirlemek
+Bir etikete ait içeriğin öncesine ve sonrasına içerik eklemek
+        */
+        p::first-line{
+            color:aqua
+        }
+        p::first-letter{
+            font-size: x-large;
+        }
+
+        h1::after{
+            content: url(smile.gif);
+        }
+    </style>
+</head>
+<body>
+ <h1>Sayfa Basligi</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit beatae officia suscipit corrupti blanditiis autem, voluptate fugiat iure facilis consectetur provident porro, aliquam eveniet nihil itaque alias cumque quo incidunt!
+    Dolor quis eaque culpa dolorem ut quas, similique maxime minus pariatur a, consectetur, quasi consequatur. Libero assumenda temporibus consequatur ad nemo numquam ex beatae. Ipsum est provident libero harum animi?
+    Dolor magnam eius exercitationem similique fuga, reprehenderit quisquam reiciendis nulla aliquam accusamus assumenda amet consequatur nam facilis, cupiditate explicabo saepe ipsam? Mollitia doloribus iusto commodi dicta quibusdam repudiandae, fuga sunt.
+    Saepe porro ducimus molestiae, impedit pariatur omnis laudantium commodi voluptate? Mollitia, voluptas laborum veritatis officia ipsum quidem. Ipsam, laboriosam, eius praesentium quos sed natus in accusantium aperiam nobis, odio excepturi.</p>
+</body>
+</html>

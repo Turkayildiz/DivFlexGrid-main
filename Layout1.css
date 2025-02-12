@@ -1,0 +1,66 @@
+/* 
+CSS box-sizing özelliği, bir etiketin toplam genişliğine ve yüksekliğine 
+iç boşluk (padding) ve çerçeve (border) eklememizi sağlar.
+
+Varsayılan olarak, bir etiketin genişliği ve yüksekliği şu şekilde hesaplarız :
+
+genişlik (width) + iç boşluk (padding) + çerçeve (border) = Bir etiketin kapladığı toplam genişlik
+yükseklik (height) + iç boşluk (padding) + çerçeve (border) = Bir etiketin kapladığı toplam yükseklik
+
+Bu demek oluyor ki, bir etiketin genişliğini/yüksekliğini ayarladığınızda, 
+etiket genellikle ayarladığınızdan daha büyük görünür 
+(çünkü öğenin çerçevisi ve iç boşluğu etiketin belirtilen genişliğine/yüksekliğine eklenir).
+
+   
+    Modern CSS kullanırken genellikle box-sizing: border-box; kullanılır, 
+    çünkü bu sayede padding ve border genişliği değiştirmez, 
+    tasarım daha tutarlı olur.
+*/
+
+
+
+*{
+    box-sizing: border-box;
+}
+.header{
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 20px;
+}
+.topnav{
+    overflow: hidden;
+    background-color: #333;
+}
+.topnav a{
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding :14px 16px;
+    color:#f2f2f2;
+}
+.topnav a:hover{
+    background-color: #ddd;
+    color:black;
+}
+.footer{
+    padding: 10px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+.column{
+    float: left;
+    padding: 10px;
+    /* border:1px solid black; */
+}
+.column.side{
+    width: 25%;
+}
+.column.content{
+    width: 50%;
+}
+.row::after{
+content: "";
+display: table;
+clear: both;
+}

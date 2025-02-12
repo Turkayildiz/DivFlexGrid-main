@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        CSS Pseudo-Clasess (Sözde Sınıflar) 
+        Sözde sınıf, bir html etiketin özel durumunu tanımlamak için kullanılır. 
+        Örneğin, şu amaçlarla kullanılabilir:
+        
+        Kullanıcı faresini üzerine getirdiğinde bir öğenin stilini belirlemede
+
+        Ziyaret edilmiş veya edilmemiş bağlantıları ayırt etmede
+        
+        Bir etikete tıklanıldığı anda ki stilini belirlemede
+         */
+        
+         /* Ziyaret edilmemiş link */
+         a:link{
+            color:rgb(8, 43, 243);
+        }
+
+        a:visited{
+            color:green;
+        }
+        a:hover{
+            color:hotpink;
+        }
+        p{
+            display: none;
+            background-color: chocolate;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        div:hover p:nth-child(4){
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">Google</a>
+    <div>
+        Bu divin uzerine gelirsen baska bir gorursun
+        <p>Burasi gizli olan yer 1</p>
+        <p>Burasi gizli olan yer 2</p>
+        <p>Burasi gizli olan yer 3</p>
+        <p>Burasi gizli olan yer 4</p>
+    </div>
+</body>
+</html>
