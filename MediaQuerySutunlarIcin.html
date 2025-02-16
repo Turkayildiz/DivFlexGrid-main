@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 20px;
+}
+/* 
+Aşağıdaki CSS kodu, "clearfix" adı verilen ve yüzer (float) öğelerle oluşan düzen sorunlarını gidermek için
+kullanılan bir tekniktir:
+
+```css
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+```
+
+**Açıklama:**
+
+- **.row:after**  
+  CSS pseudo-element `:after` kullanılarak, `.row` sınıfına sahip elementin sonuna 
+  sanal bir içerik eklenir. Bu içerik HTML’de yer kaplamaz ancak 
+  CSS özellikleri uygulanır.
+
+- **content: "";**  
+  Pseudo-elementin içeriğini boş bir string olarak tanımlar. Bu, elementin varlığını sağlamak için gereklidir.
+
+- **display: table;**  
+  Bu, pseudo-elementin blok-level bir element gibi davranmasını ve genişlik ile 
+  yükseklik özelliklerini kapsamlı bir şekilde kullanabilmesini sağlar.
+
+- **clear: both;**  
+  Bu özellik, yüzer (float) öğelerin etkisinin sona ermesini garanti eder. 
+  Böylece `.row` içerisindeki yüzer öğelerin (örneğin, float:left veya float:right kullanılmış) 
+  dışarı taşarak oluşturabileceği düzen bozuklukları önlenir.
+
+Özetle, bu kod, `.row` sınıfına sahip bir kapsayıcı içinde yüzer öğeler varsa, 
+kapsayıcının yüksekliğinin yüzer öğeleri de kapsamasını sağlayarak sayfa düzeninde 
+beklenmeyen kaymaları engeller.
+
+*/
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 992px) {
+  .column {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Responsive Kolonlar</h2>
+<p><strong>Responsive efekti görmek için tarayıcı penceresini yeniden boyutlandırın.</strong> 992 piksel veya daha az genişlikteki ekranlarda, sütunlar dört sütundan iki sütuna yeniden boyutlandırılacaktır. 600 piksel veya daha az genişlikteki ekranlarda sütunlar yan yana değil üst üste yığılır.</p>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>Sütun 1</h2>
+    <p>Lorem Ipsum.</p>
+  </div>
+  
+  <div class="column" style="background-color:#bbb;">
+    <h2>Sütun 2</h2>
+    <p>Lorem Ipsum.</p>
+  </div>
+  
+  <div class="column" style="background-color:#ccc;">
+    <h2>Sütun 3</h2>
+    <p>Lorem Ipsum.</p>
+  </div>
+  
+  <div class="column" style="background-color:#ddd;">
+    <h2>Sütun 4</h2>
+    <p>Lorem Ipsum.</p>
+  </div>
+</div>
+
+</body>
+</html>

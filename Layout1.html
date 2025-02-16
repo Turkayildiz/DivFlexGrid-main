@@ -21,7 +21,8 @@
     </div>
     <div class="row">
         <div class="column side">
-            <h4>Column left side</h4>
+            <h3 id="id1" onmouseover="bigImage()" onmouseout="normalImage()">Column left side</h3>
+            
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div class="column content">
@@ -32,7 +33,7 @@
             Nemo quibusdam eius placeat, commodi dolorem tempore modi debitis explicabo hic distinctio ullam tenetur reiciendis totam cupiditate ab? Ut voluptatum perspiciatis numquam itaque dolorem labore quas corrupti. Itaque, facilis dolorum?</p>
         </div>
         <div class="column side">
-            <h4>Rigth Side</h4>
+            <h3>Rigth Side</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
         </div>
@@ -42,5 +43,14 @@
     <div class="footer">
         <h3>Footer</h3>
     </div>
+    <script>
+ function bigImage(){
+    document.getElementById("id1").style.color="red";
+}
+function normalImage(){
+    document.getElementById("id1").style.color="blue";
+}
+ 
+    </script>
 </body>
 </html>
